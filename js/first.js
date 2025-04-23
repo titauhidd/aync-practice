@@ -18,8 +18,21 @@
 //   }
 // }
 
+// async function loaddata() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+//   const data = await res.json();
+//   console.log(data);
+// }
+
+// with try catch---------
+
 async function loaddata() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const data = await res.json();
-  console.log(data);
+  try {
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await res.json();
+    console.log(data);
+  } catch (err) {
+    console.log(`Err:-`, err);
+  }
 }
+loaddata();
